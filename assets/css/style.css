@@ -1,0 +1,100 @@
+:root {
+    --main-color: #1f1f2a;
+    --second-color: #ffffff;
+    --third-color: #003bdd;
+    --fourth-color: #5A3BF5;
+}
+
+body{
+    font-family: "Lora", serif;
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Playfair Display", serif;
+}
+
+.transparent-navbar {
+    background-color: rgb(31, 31, 42, .8);
+    z-index: 1000;
+}
+
+.navbar-brand {
+    color: var(--second-color);
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    z-index: 1000;
+    scale: 1.2;
+}
+
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/restaurant-interior.jpg') center center fixed no-repeat;
+    background-size: cover; /* Ensure the background image covers the entire banner area */
+    height: 900px;
+}
+
+.banner .banner-desc {
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--second-color);
+}
+
+.card {
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+
+/* footer .container{
+    background-color: black;
+} */
+
+nav ul li .nav-link {
+    color: var(--second-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav ul li .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--third-color);
+    transition: width 0.3s ease;
+}
+
+nav ul li .nav-link:hover {
+    color: var(--third-color);
+}
+
+nav ul li .nav-link:hover::after {
+    width: 70%;
+}
+
+.btn-order {
+    color: var(--third-color);
+    border-color: var(--third-color);
+    transition: 0.5s;
+}
+
+.btn-order:hover,
+.btn-order:active {
+    background-color: var(--third-color);
+    color: var(--second-color);
+}
