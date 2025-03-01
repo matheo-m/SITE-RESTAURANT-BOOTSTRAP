@@ -28,6 +28,15 @@ h5 {
     color: var(--second-color);
 }
 
+#back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    z-index: 1000;
+    scale: 1.2;
+}
+
 .banner {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/restaurant-interior.jpg') center center fixed no-repeat;
     background-size: cover; /* Ensure the background image covers the entire banner area */
