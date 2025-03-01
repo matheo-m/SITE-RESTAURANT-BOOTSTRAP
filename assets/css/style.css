@@ -1,7 +1,59 @@
+:root {
+    --main-color: #1f1f2a;
+    --second-color: #ffffff;
+    --third-color: #003bdd;
+    --fourth-color: #5A3BF5;
+}
+
 body {
     font-family: "Lora", serif;
 }
 
 h1, h2, h3 {
     font-family: "Playfair Display", serif;
+}
+
+.trans-navbar{
+    background-color: rgb(31, 31, 42, .55);
+}
+
+nav ul li .nav-link {
+    color: var(--second-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav ul li .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--third-color);
+    transition: width 0.3s ease;
+}
+
+nav ul li .nav-link:hover {
+    /* padding-bottom: 20px; */
+    color: var(--third-color);
+}
+
+nav ul li .nav-link:hover::after {
+    width: 70%;
+}
+
+.btn-order {
+    color: var(--third-color);
+    border-color: var(--third-color);
+    transition: 0.5s;
+}
+
+.btn-order:hover, .btn-order:active {
+    background-color: var(--third-color);
+    color: var(--second-color);
 }
